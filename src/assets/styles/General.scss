@@ -1,0 +1,28 @@
+/* normalize.css */
+@import url(https://necolas.github.io/normalize.css/latest/normalize.css);
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Pacifico&family=Roboto&display=swap");
+
+@import "./_Variables.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+#root {
+  margin: 5%;
+  padding: 0.5%;
+  background: $app-bg-gradient;
+}
