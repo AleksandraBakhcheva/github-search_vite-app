@@ -1,0 +1,49 @@
+@import "./_Variables.scss";
+
+.card {
+  display: flex;
+  max-width: 100%;
+  margin: 1%;
+  padding: 1%;
+  flex-direction: column;
+  align-items: center;
+  background-color: $main-color;
+
+  a {
+    text-decoration: none;
+    color: $link-bg-color;
+
+    &:hover {
+      color: $main-color;
+      background-color: $link-bg-color;
+    }
+  }
+
+  img {
+    max-width: 200px;
+  }
+
+  .card-buttons {
+    display: flex;
+    margin-top: 2%;
+    gap: 2%;
+
+    button {
+      width: 100px;
+      height: 40px;
+      font-size: 1rem;
+      border-radius: 7px;
+      border-width: 0;
+      cursor: pointer;
+      transition: all 200ms;
+      box-shadow: $button-box-shadow;
+      color: $main-color;
+      background-color: $card-button-bg-color;
+
+      &:hover {
+        transform: scale(1.05);
+        background-color: $card-button-bg-color-hover;
+      }
+    }
+  }
+}
