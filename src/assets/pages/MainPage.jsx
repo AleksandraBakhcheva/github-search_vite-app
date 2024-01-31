@@ -19,15 +19,17 @@ export const MainPage = observer(() => {
 
   return (
     <div className="container">
-      <h1>Search in GitHub:</h1>
-      <label htmlFor="user-search"></label>
-      <input
-        id="user-search"
-        type="text"
-        onChange={(event) => handleChange(event)}
-        value={userInput}
-        placeholder="Search..."
-      />
+      <div className="container-search">
+        <h1>Search in GitHub:</h1>
+        <label htmlFor="user-search"></label>
+        <input
+          id="user-search"
+          type="text"
+          onChange={(event) => handleChange(event)}
+          value={userInput}
+          placeholder="Search..."
+        />
+      </div>
       <div className="container-repos">
         <div>
           {store.repos.items && <h4>List of repositories:</h4>}
