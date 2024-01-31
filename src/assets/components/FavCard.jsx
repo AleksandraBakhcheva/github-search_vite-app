@@ -1,8 +1,17 @@
 import "../styles/Card.scss";
+import { Link } from "react-router-dom";
 
 export const FavCard = (props) => {
-  const { html_url, name, stargazers_count, forks, avatar_url, alt, onClick } =
-    props;
+  const {
+    html_url,
+    name,
+    stargazers_count,
+    forks,
+    avatar_url,
+    alt,
+    onClick,
+    cardId,
+  } = props;
 
   return (
     <div className="card">
@@ -12,12 +21,14 @@ export const FavCard = (props) => {
         </a>
         <span> - {name}</span>
       </p>
-      <p>Namber of stars: {stargazers_count}</p>
+      <p>Number of stars: {stargazers_count}</p>
       <p>Number of forks: {forks}</p>
       <img srcSet={avatar_url} alt={alt} />
       <div className="card-buttons">
         <button onClick={onClick}>Delete from Favourites</button>
-        <button>More Details</button>
+        <Link to={`details/${cardId}`}>
+          <button>More Details</button>
+        </Link>
       </div>
     </div>
   );
