@@ -1,6 +1,6 @@
-# Smartway test assignment
+# Search for repositories 
 
-Test assignment-project
+App based on GitHub API
 
 ## Stack
 
