@@ -27,7 +27,6 @@ class ReposStore {
   };
 
   addToFavourites = (id) => {
-    console.log(id);
     this.favourites.push(id);
   };
 
