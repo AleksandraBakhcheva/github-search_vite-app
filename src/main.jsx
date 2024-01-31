@@ -6,7 +6,7 @@ import App from "./App.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter basename="/github-search_vite-app">
+    <BrowserRouter basename="/github-search_vite-app/">
       <App />
     </BrowserRouter>
   </React.StrictMode>

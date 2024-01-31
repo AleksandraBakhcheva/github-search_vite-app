@@ -17,7 +17,7 @@ export const FavCard = (props) => {
     <div className="card">
       <p>
         <a href={html_url} target="_blank">
-          {html_url}
+          Click Repository Link
         </a>
         <span> - {name}</span>
       </p>

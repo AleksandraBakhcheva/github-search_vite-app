@@ -34,7 +34,7 @@ export const DetailsPage = () => {
               href={repoItem.html_url}
               target="_blank"
             >
-              {repoItem.html_url}
+              Click Repository Link
             </a>
           </p>
           <div>
