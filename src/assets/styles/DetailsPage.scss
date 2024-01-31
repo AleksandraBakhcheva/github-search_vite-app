@@ -1,0 +1,52 @@
+@import "./Variables";
+
+.details-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    padding: 1%;
+    font-size: 1.5rem;
+  }
+
+  img {
+    padding: 1%;
+    max-width: 400px;
+  }
+
+  .details-link {
+    text-decoration: none;
+    color: $link-bg-color;
+
+    &:hover {
+      color: $main-color;
+      background-color: $link-bg-color;
+    }
+  }
+
+  .details-button {
+    width: 100px;
+    height: 40px;
+    margin: 5%;
+    font-size: 1rem;
+    border-radius: 7px;
+    border-width: 0;
+    cursor: pointer;
+    color: $main-color;
+    background-color: $card-button-bg-color;
+
+    &:hover {
+      background-color: $card-button-bg-color-hover;
+    }
+  }
+}

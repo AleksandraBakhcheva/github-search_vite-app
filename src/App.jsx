@@ -3,7 +3,7 @@ import store from "./assets/stores/repos-store";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Layout } from "./assets/components/Layout";
 import { MainPage } from "./assets/pages/MainPage";
-import { RepoPage } from "./assets/pages/RepoPage";
+import { DetailsPage } from "./assets/pages/DetailsPage";
 import { NotFoundPage } from "./assets/components/NotFoundPage";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<MainPage />} />
-            <Route path="details/:id" element={<RepoPage />} />
+            <Route path="details/:id" element={<DetailsPage />} />
             <Route path="404" element={<NotFoundPage />} />
             <Route path="*" element={<Navigate replace to="404" />} />
           </Route>
