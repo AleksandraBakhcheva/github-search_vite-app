@@ -4,9 +4,8 @@ App based on GitHub API allows you to search for repositories based on input and
 
 ## Screens
 
-<img width="820" alt="desktop" src="">
-<img width="195" alt="mobile" src="">
-<img width="621" alt="tablet" src="">
+<img width="621" alt="desktop" src="https://github.com/AleksandraBakhcheva/github-search_vite-app/assets/76097160/e7ddea6a-d25d-4b75-89af-e0e80245e15e">
+<img width="195" alt="mobile" src="https://github.com/AleksandraBakhcheva/github-search_vite-app/assets/76097160/376a0882-d094-4e23-bedd-b0b21153b088">
 
 ## Stack
 
