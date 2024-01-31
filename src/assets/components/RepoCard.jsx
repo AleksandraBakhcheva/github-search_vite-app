@@ -16,7 +16,7 @@ export const RepoCard = (props) => {
   return (
     <div className="card">
       <p>
-        <a href={html_url} target="_blank">
+        <a className="card-link" href={html_url} target="_blank">
           Click Repository Link
         </a>
         <span> - {name}</span>
