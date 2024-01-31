@@ -1,20 +1,28 @@
 import "../styles/MainPage.scss";
 import { observer } from "mobx-react";
 import { useState, useEffect } from "react";
+import { makeDebounceHook } from "../hooks/use-debounce";
+import { throttle } from "lodash-es";
 import store from "../stores/repos-store";
 import { RepoCard } from "../components/RepoCard";
 import { FavCard } from "../components/FavCard";
 
 export const MainPage = observer(() => {
   const [userInput, setUserInput] = useState("");
+  const useThrottle = makeDebounceHook(throttle);
+
+  const makeRequest = useThrottle(() => {
+    console.log("user request: ", userInput);
+  }, 5000);
 
   const handleChange = (event) => {
-    setUserInput(event.target.value);
+    const { value } = event.target;
+    makeRequest(value);
+    setUserInput(value);
   };
 
   useEffect(() => {
     store.loadDataAction(userInput);
-    setUserInput("");
   }, [userInput]);
 
   return (
