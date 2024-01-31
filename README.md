@@ -1,6 +1,6 @@
 # Search for repositories 
 
-App based on GitHub API allows you to search for repositories based on input and shows details for every found one
+App based on GitHub API allows you to search for repositories based on input and shows details for every found project
 
 ## Screens
 
