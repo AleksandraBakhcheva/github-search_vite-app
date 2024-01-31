@@ -36,7 +36,7 @@ export const MainPage = observer(() => {
               <div key={item.id}>
                 <RepoCard
                   html_url={item.html_url}
-                  name={item.name}
+                  name={item.full_name}
                   stargazers_count={item.stargazers_count}
                   forks={item.forks}
                   avatar_url={item.owner.avatar_url}
@@ -54,7 +54,7 @@ export const MainPage = observer(() => {
               <div key={item.id}>
                 <FavCard
                   html_url={item.html_url}
-                  name={item.name}
+                  name={item.full_name}
                   stargazers_count={item.stargazers_count}
                   forks={item.forks}
                   avatar_url={item.owner.avatar_url}

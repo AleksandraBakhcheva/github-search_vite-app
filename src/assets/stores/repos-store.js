@@ -31,7 +31,13 @@ class ReposStore {
   };
 
   deleteFromFavourites = (id) => {
-    this.favourites.pop(id);
+    const objWithIdIndex = this.favourites.findIndex(
+      (item) => item.id == id.id
+    );
+    if (objWithIdIndex > -1) {
+      this.favourites.splice(objWithIdIndex, 1);
+    }
+    return this.favourites;
   };
 }
 
