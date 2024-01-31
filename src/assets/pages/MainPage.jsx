@@ -30,7 +30,7 @@ export const MainPage = observer(() => {
       />
       <div className="container-repos">
         <div>
-          <h4>List of repositories:</h4>
+          {store.repos.items && <h4>List of repositories:</h4>}
           {store.repos.items &&
             store.repos.items.map((item) => (
               <div key={item.id}>
@@ -42,23 +42,25 @@ export const MainPage = observer(() => {
                   avatar_url={item.owner.avatar_url}
                   alt={item.id}
                   onClick={() => store.addToFavourites(item)}
+                  cardId={item.id}
                 />
               </div>
             ))}
         </div>
         <div>
-          <h4>List of favourites:</h4>
+          {store.favourites.length > 0 && <h4>List of favourites:</h4>}
           {store.favourites &&
-            store.favourites.map((item, index) => (
-              <div key={index}>
+            store.favourites.map((item) => (
+              <div key={item.id}>
                 <FavCard
                   html_url={item.html_url}
                   name={item.name}
                   stargazers_count={item.stargazers_count}
                   forks={item.forks}
                   avatar_url={item.owner.avatar_url}
-                  alt={index}
+                  alt={item.id}
                   onClick={() => store.deleteFromFavourites(item)}
+                  cardId={item.id}
                 />
               </div>
             ))}
