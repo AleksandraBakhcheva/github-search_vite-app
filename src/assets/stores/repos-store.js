@@ -27,7 +27,9 @@ class ReposStore {
   };
 
   addToFavourites = (id) => {
-    this.favourites.push(id);
+    if (!this.favourites.includes(id)) {
+      this.favourites.push(id);
+    }
   };
 
   deleteFromFavourites = (id) => {
