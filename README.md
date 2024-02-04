@@ -6,8 +6,8 @@ App based on GitHub API allows you to search for repositories based on input and
 
 <img width="621" alt="desktop" src="https://github.com/AleksandraBakhcheva/github-search_vite-app/assets/76097160/b8a78dbe-d9f0-40ef-81c0-ccba4e07da99">
 <img width="195" alt="mobile" src="https://github.com/AleksandraBakhcheva/github-search_vite-app/assets/76097160/477bd202-1c4a-45e9-a55c-9db7ad44ac51">
-<img width="195" alt="mobile" src="https://github.com/AleksandraBakhcheva/github-search_vite-app/assets/76097160/4f04323d-1ff3-4ca5-8f2d-c4ba1b1ee086">
-<img width="621" alt="desktop" src="https://github.com/AleksandraBakhcheva/github-search_vite-app/assets/76097160/c7cbfb94-8e84-4b87-8ce7-c5e3fc59c81d">
+<img width="621" alt="desktop" src="https://github.com/AleksandraBakhcheva/github-search_vite-app/assets/76097160/1bef7316-34ad-4c6b-99e2-22a88ccb73b1">
+<img width="195" alt="mobile" src="https://github.com/AleksandraBakhcheva/github-search_vite-app/assets/76097160/c3d26a92-f365-416e-8047-4cbf31064363">
 
 ## Stack
 
