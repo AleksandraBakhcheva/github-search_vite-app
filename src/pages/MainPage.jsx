@@ -4,8 +4,7 @@ import { useState, useEffect } from "react";
 import { makeDebounceHook } from "../hooks/useDebounce";
 import { throttle } from "lodash-es";
 import store from "../stores/reposStore";
-import { RepoCard } from "../components/RepoCard";
-import { FavCard } from "../components/FavCard";
+import { Card } from "../components/Card";
 
 export const MainPage = observer(() => {
   const [userInput, setUserInput] = useState("");
@@ -40,37 +39,39 @@ export const MainPage = observer(() => {
       </div>
       <div className="container-repos">
         <div>
-          {store.repos.items && <h4>List of repositories:</h4>}
+          {store.repos.items && <h4>List of Repositories:</h4>}
           {store.repos.items &&
             store.repos.items.map((item) => (
               <div key={item.id}>
-                <RepoCard
-                  html_url={item.html_url}
-                  name={item.full_name}
-                  stargazers_count={item.stargazers_count}
-                  forks={item.forks}
+                <Card
+                  url={item.html_url}
+                  repo_name={item.full_name}
+                  stars_count={item.stargazers_count}
+                  forks_num={item.forks}
                   avatar_url={item.owner.avatar_url}
                   alt={item.id}
                   onClick={() => store.addToFavourites(item)}
-                  cardId={item.id}
+                  btn_name="Add to Favourites"
+                  card_id={item.id}
                 />
               </div>
             ))}
         </div>
         <div>
-          {store.favourites.length > 0 && <h4>List of favourites:</h4>}
+          {store.favourites.length > 0 && <h4>List of Favourites:</h4>}
           {store.favourites &&
             store.favourites.map((item) => (
               <div key={item.id}>
-                <FavCard
-                  html_url={item.html_url}
-                  name={item.full_name}
-                  stargazers_count={item.stargazers_count}
-                  forks={item.forks}
+                <Card
+                  url={item.html_url}
+                  repo_name={item.full_name}
+                  stars_count={item.stargazers_count}
+                  forks_num={item.forks}
                   avatar_url={item.owner.avatar_url}
                   alt={item.id}
                   onClick={() => store.deleteFromFavourites(item)}
-                  cardId={item.id}
+                  btn_name="Remove from Favourites"
+                  card_id={item.id}
                 />
               </div>
             ))}
