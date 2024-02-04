@@ -1,31 +1,54 @@
 @import "./Variables";
 
 .details-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
+
+  .box-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    @media screen and (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
+  }
 
   h1 {
     font-size: 2.5rem;
+    color: $input-bg-color;
+
+    @media screen and (max-width: 800px) {
+      font-size: 1.5rem;
+    }
   }
 
   h2 {
     font-size: 2rem;
+
+    @media screen and (max-width: 800px) {
+      font-size: 1.2rem;
+    }
   }
 
   p {
     padding: 1%;
     font-size: 1.5rem;
+
+    @media screen and (max-width: 800px) {
+      font-size: 1rem;
+    }
   }
 
   img {
-    padding: 1%;
-    max-width: 400px;
+    max-width: 350px;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 800px) {
       max-width: 200px;
     }
+  }
+
+  span {
+    color: $link-bg-color;
   }
 
   .details-link {
@@ -41,7 +64,7 @@
   .details-button {
     width: 100px;
     height: 40px;
-    margin: 5%;
+    margin: 3%;
     font-size: 1rem;
     border-radius: 7px;
     border-width: 0;

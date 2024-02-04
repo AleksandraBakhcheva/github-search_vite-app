@@ -18,35 +18,57 @@ export const DetailsPage = () => {
       {store.repos.items && (
         <div className="details-box">
           <h1>{`Details about "${repoItem.name}"`}</h1>
-          <h2>Owner login: {repoItem.owner.login}</h2>
-          <img srcSet={repoItem.owner.avatar_url} alt="" />
-          <p>ID number: {repoItem.id}</p>
-          <p>Full name: {repoItem.full_name}</p>
-          <p>Language: {repoItem.language}</p>
-          <p>Number of forks: {repoItem.forks}</p>
-          <p>Namber of stars: {repoItem.stargazers_count}</p>
-          <p>Number of watchers: {repoItem.watchers}</p>
-          <p>Description: {repoItem.description}</p>
-          <p>
-            URL:{" "}
-            <a
-              className="details-link"
-              href={repoItem.html_url}
-              target="_blank"
-            >
-              Click Repository Link
-            </a>
-          </p>
-          <div>
-            <Link to="/">
-              <motion.button
-                className="details-button"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9, x: "-5px", y: "5px" }}
-              >
-                HOMEPAGE
-              </motion.button>
-            </Link>
+          <h2>
+            Owner login: <span>{repoItem.owner.login}</span>
+          </h2>
+          <div className="box-content">
+            <div>
+              <img srcSet={repoItem.owner.avatar_url} alt="" />
+            </div>
+            <div>
+              <p>
+                ID number: <span>{repoItem.id}</span>
+              </p>
+              <p>
+                Full name: <span>{repoItem.full_name}</span>
+              </p>
+              <p>
+                Language: <span>{repoItem.language}</span>
+              </p>
+              <p>
+                Number of forks: <span>{repoItem.forks}</span>
+              </p>
+              <p>
+                Namber of stars: <span>{repoItem.stargazers_count}</span>
+              </p>
+              <p>
+                Number of watchers: <span>{repoItem.watchers}</span>
+              </p>
+              <p>
+                Description: <span>{repoItem.description}</span>
+              </p>
+              <p>
+                URL:{" "}
+                <a
+                  className="details-link"
+                  href={repoItem.html_url}
+                  target="_blank"
+                >
+                  Click Repository Link
+                </a>
+              </p>
+              <div>
+                <Link to="/">
+                  <motion.button
+                    className="details-button"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9, x: "-5px", y: "5px" }}
+                  >
+                    HOMEPAGE
+                  </motion.button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       )}
