@@ -1,10 +1,10 @@
 import { Provider } from "mobx-react";
-import store from "./assets/stores/repos-store";
+import store from "./stores/reposStore";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Layout } from "./assets/components/Layout";
-import { MainPage } from "./assets/pages/MainPage";
-import { DetailsPage } from "./assets/pages/DetailsPage";
-import { NotFoundPage } from "./assets/components/NotFoundPage";
+import { Layout } from "./components/Layout";
+import { MainPage } from "./pages/MainPage";
+import { DetailsPage } from "./pages/DetailsPage";
+import { NotFoundPage } from "./components/NotFoundPage";
 
 function App() {
   return (

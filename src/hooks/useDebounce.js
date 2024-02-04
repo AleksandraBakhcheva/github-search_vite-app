@@ -1,5 +1,5 @@
 import { useMemo, useEffect } from "react";
-import { useThrottle } from "./use-throttle";
+import { useThrottle } from "./useThrottle";
 
 export const makeDebounceHook = (debounceFn) => {
   return function useDebounce(cb, ms) {

@@ -1,5 +1,5 @@
 import "../styles/NotFoundPage.scss";
-import error_404 from "../images/error_404.png";
+import error_404 from "../assets/images/error_404.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 

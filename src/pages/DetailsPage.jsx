@@ -1,6 +1,6 @@
 import "../styles/DetailsPage.scss";
 import { useParams } from "react-router-dom";
-import store from "../stores/repos-store";
+import store from "../stores/reposStore";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
